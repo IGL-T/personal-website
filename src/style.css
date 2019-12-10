@@ -1,4 +1,5 @@
 body {
+    overflow: hidden;
     margin: 0px;
     font-family: system-ui -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -11,7 +12,7 @@ body {
     background-color:#a07456;
     color:#ffffff;
     justify-content:center;
-   
+    min-height:100px;
 }
     #menu-fix{
         position:absolute;
@@ -19,6 +20,7 @@ body {
         left:0;
         width:100vw;
         height:10vh;
+        min-height:100px;
     }
     #menu-left {
         position: relative;
@@ -30,6 +32,7 @@ body {
         text-align: center;
         line-height: 10vh;
         font-size: 24px;
+        min-height:100px;
     }
     #menu-right{
         position:relative;
@@ -55,6 +58,7 @@ body {
     height: 100%;
     padding-left: 8px;
     padding-right: 8px;
+    min-height: 100px;
 }
 .menu-tab:hover {
     color:#000000;
@@ -64,12 +68,25 @@ body {
     user-select:none;
 }
 #page{
-    position:static;
-    top:10vh;
+    position:absolute;
     left:0vw;
     right:0vw;
-    height:90vh;
+    height:auto;
     background:#e8c5ad;
     font-size:24px;
     overflow-y:scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0px
+}
+
+::-webkit-scrollbar-track {
+    background: #F6E7DD;
+    border-radius: 8px
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a07456;
+    border-radius: 8px
 }
